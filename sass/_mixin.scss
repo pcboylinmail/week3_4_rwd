@@ -1,0 +1,54 @@
+
+@import "function";
+
+
+@mixin font-base {
+    font-size: 48px;
+    line-height: 72px;
+}
+@mixin  font-second {
+    font-size: 36px;
+    line-height: 54px;
+}
+
+@mixin  font-thired {
+    font-size: 20px;
+    line-height: 30px;
+}
+@mixin font-forth {
+    font-size: 16px;
+    line-height: 24px;
+}
+@mixin font-style($fz,$lh){
+    font-size: $fz;
+    line-height: $lh;
+}
+@mixin img-base {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@mixin flex($jc:center,$fd:row) {
+    display: flex;
+    justify-content: flexjustify($jc);
+    flex-direction: flexdirection($fd);
+}
+@mixin container-pd {
+    padding-top: 64px;
+    padding-bottom: 80px;
+}
+@mixin container-pd-pad {
+    padding-top:40px;
+    padding-bottom: 40px;
+}
+@mixin container-pd-phone {
+    padding-top:24px;
+    padding-bottom: 24px;
+}
+@mixin title{
+    @include font-base;
+    color: $title-color;
+    font-weight: bold;
+    text-align: center;
+}

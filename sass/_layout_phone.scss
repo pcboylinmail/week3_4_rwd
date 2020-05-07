@@ -1,0 +1,107 @@
+header {
+    position: relative;
+    justify-content: center;
+    padding: 10px 0;
+    align-items: center;
+    flex-direction: column;
+
+    .menubtn {
+        display: block;
+        position: absolute;
+        left: 13px;
+        width: 24px;
+    }
+    h1 img {
+        width: 48px;
+        height: 30px;
+    }
+    .menu {
+        max-height: 0px;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: all 0.8s;
+        z-index: 120;
+
+        &active {
+            max-height: 252px;
+        }
+        li {
+            display: block;
+            background: #aa0601;
+            color: #ffffff;
+            border-top: 1px solid #ffffff;
+            padding: 16px 0;
+            z-index: 120;
+            &hover {
+                background: #8f0400;
+            }
+        }
+        &active {
+            max-height: 252px;
+        }
+    }
+}
+footer {
+    padding-left: 11px;
+    padding-right: 11px;
+    .container {
+        .footer-phone{
+            @include flex("sb", "rr");           
+        }
+        .footer-hd {
+            align-items: center;
+            margin: 0;
+            .list {
+                display: none;
+            }
+            .icon {
+                li{
+                    margin-right: 24px;
+                }
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .content {
+            img {
+                width: 13px;
+                height: 13px;
+                margin-right: 8px;
+            }
+            p{
+                @include font-style(16px,30px);
+            }
+        }
+        .footer-dn {
+            
+            color: white;
+            
+            img {
+               display: none;
+            }
+            .copy {
+                width: 100%;
+                @include flex("sb", "r");
+                align-items: start;
+                flex-direction: column;
+                >span{
+                    display: block;
+                }
+                p{
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+}

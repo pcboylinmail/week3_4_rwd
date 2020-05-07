@@ -1,0 +1,24 @@
+@function flexjustify($jc) {
+    @if $jc =="c"{
+        @return center;
+    }@else if $jc == "sb"{
+        @return space-between;
+    } @else if $jc == "sa" {
+        @return space-around;
+    }@else if $jc == "s" {
+        @return start;
+    }
+
+  }
+@function flexdirection($fd){
+    @if $fd == "c"{
+        @return column;
+    } @else if $fd == "cr" {
+        @return column-reverse;
+    }
+    @if $fd == "r"{
+        @return row;
+    } @else if $fd == "rr" {
+        @return row-reverse;
+    }
+}

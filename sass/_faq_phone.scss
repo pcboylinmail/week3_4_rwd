@@ -1,0 +1,45 @@
+.faq-bg .container,.faq-content .container {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.faq-bg {
+    background: url("../image/72_phone.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 143px;
+    padding-top: 103px;
+    margin-bottom: 24px;
+    .container {
+        height: 40px;
+        h1 {
+            @include font-style(28px, 80px);
+        }
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+.faq-content {
+    margin-bottom: 56px;
+    h2 {
+        @include font-style(20px, 63px);
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        @include font-forth;
+    }
+    p {
+        @include font-style(14px, 21px);
+    }
+    .item-hd {
+        padding: 16px 16px;
+        padding-right: 8px;
+        border-bottom: 1px solid #000000;
+    }
+    .item-body {
+        background-color: #f2f2f2;
+        padding: 16px 16px;
+    }
+}

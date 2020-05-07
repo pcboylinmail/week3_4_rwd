@@ -1,0 +1,213 @@
+.title {
+    @include title;
+}
+
+.main,
+.product,
+.custom,
+.contact {
+    @include container-pd;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.menu {
+    width: 512px;
+    @include flex("sb", "r");
+    li {
+        padding: 10px 0;
+
+        a {
+            color: white;
+            font-size: 20px;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+    }
+}
+
+.banner {
+    background: url("../image/68.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 840px;
+    position: relative;
+    color: $title-color;
+
+    h1 {
+        display: inline-block;
+        width: 526px;
+        height: 50px;
+        @include font-second;
+    }
+
+    h3 {
+        display: inline-block;
+        width: 576px;
+        height: 90px;
+        @include font-style(64px, 96px);
+    }
+    .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 66%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+    }
+}
+
+
+.main {
+    height: 544px;
+    background-color: #aa06010d;
+    .title {
+        margin-bottom: 64px;
+    }
+
+    ul {
+        @include flex("sb", "r");
+        flex-wrap: wrap;
+    }
+
+    li {
+        text-align: center;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    p {
+        width: 208px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.product {
+    .title {
+        margin-bottom: 60px;
+    }
+
+    .product-style {
+        font-family: Roboto, sans-serif;
+        font-style: Italic;
+        color: $main-color;
+        font-weight: bold;
+        @include flex("c", "r");
+        align-items: baseline;
+    }
+
+    .product-content {
+        @include flex("s", "r");
+
+        align-items: center;
+        > img {
+            margin-bottom: 32px;
+        }
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+            > img {
+                margin-left: 24px;
+            }
+        }
+        &:nth-child(even) {
+            .product-style > img {
+                margin-left: 24px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.custom {
+    max-width: 1920px;
+    margin: 0 auto;
+    ul {
+        @include flex("c", "r");
+        flex-wrap: wrap;
+    }
+    li {
+        width: 282px;
+        margin-right: 24px;
+        list-style: none;
+        .photo {
+            display: block;
+            height: 256px;
+            img {
+                margin-bottom: 16px;
+            }
+        }
+        .content {
+            display: block;
+            padding: 16px;
+            border: 1px solid #dee2e6;
+            h3 {
+                @include font-style(16px, 21px);
+                margin-bottom: 16px;
+            }
+            p {
+                @include font-forth;
+                margin-bottom: 16px;
+            }
+        }
+        &:nth-child(4){
+            margin-right: 0;
+        }
+    }
+
+}
+
+.contact {
+    background-color: $sec-color;
+    .title {
+        color: black;
+        margin-bottom: 24px;
+    }
+    .container {
+        max-width: 792px;
+        margin: 0 auto;
+        @include font-forth;
+        h3 {
+            @include font-thired;
+            margin-bottom: 20px;
+        }
+        .agree-container {
+            display: flex;
+        }
+        .agree {
+            margin-bottom: 16px;
+        }
+        input:not([type="checkbox"]) {
+            max-width: 792px;
+            width: 100%;
+            height: 50px;
+            padding: 14px 16px;
+            border: 1px solid black;
+            margin-bottom: 16px;
+        }
+
+        textarea {
+            max-width: 792px;
+            width: 100%;
+            height: 136px;
+            padding: 14px 16px;
+            border: 1px solid black;
+        }
+        .submit {
+            @include flex("c", "r");
+            align-items: center;
+            a {
+                padding: 16px 58px;
+                display: block;
+                width: 180px;
+                height: 54px;
+                text-decoration: none;
+                color: white;
+                background-color: $main-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+
+header {
+    padding: 30px 88px;
+    background-color: $main-color;
+    @include flex("sb", "r");
+    img {
+        @include img-base;
+    }
+    .menubtn {
+        display: none;
+        color: #ffffff;
+    }
+    .menu {
+        display: flex;
+        width: 512px;
+        justify-content: space-between;
+        li {
+            padding: 10px 0;
+            a {
+                color: white;
+                font-size: 20px;
+                line-height: 1.5;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+footer {
+    font-family:Roboto,sans-serif;
+    font-weight: 100;
+    background-color: #aa0601;
+    padding: 48px 0 27.43px 0;
+    .container {
+        .footer-hd {
+            margin-bottom: 18px;
+            @include flex("sb", "r");
+            .list {
+                @include flex("sb", "r");
+                li {
+                    text-align: center;
+                    margin-right: 48px;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+            .icon {
+                @include flex("sa", "r");
+                li {
+                    margin-right: 32px;
+                }
+            }
+        }
+        .content {
+            p {
+                @include flex("s","r");
+                align-items: center;
+                @include font-second;
+                color: white;
+                margin-bottom: 11px;
+            }
+            img {
+                width: 48px;
+                height: 48px;
+                margin-right: 12px;
+            }
+        }
+        hr {
+            margin-bottom: 24px;
+        }
+        .footer-dn {
+            @include font-forth;
+            color: white;
+            @include flex("sb", "r");
+            img {
+                width: 80px;
+                margin-right: 38px;
+            }
+            .copy {
+                width: 100%;
+                @include flex("sb", "r");
+                align-items: center;
+                >span{
+                    display: block;
+                }
+                p{
+                    span{
+                        margin-right: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

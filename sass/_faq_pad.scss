@@ -1,0 +1,44 @@
+.faq-bg .container,.faq-content .container {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+.faq-bg {
+    background: url("../image/72_pad.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 304px;
+    padding-top: 237px;
+    .container {
+        height: 67px;
+        h1 {
+            @include font-style(48px, 80px);
+        }
+        img{
+            width: 48px;
+            height: 48px;
+            margin-left: 16px;
+        }
+    }
+}
+.faq-content {
+    margin-bottom: 156px;
+    h2 {
+        @include font-style(28px, 63px);
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        @include font-forth;
+    }
+    p {
+        @include font-style(14px, 21px);
+    }
+    .item-hd {
+        padding: 22px 38px;
+        border-bottom: 1px solid #000000;
+    }
+    .item-body {
+        background-color: #f2f2f2;
+        padding: 16px 24px;
+    }
+}

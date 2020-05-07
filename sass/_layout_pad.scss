@@ -1,0 +1,58 @@
+
+header {
+    padding: 30px 48px;
+
+    .menu {
+        max-width: 440px;
+    }
+}
+footer {
+    padding-left: 48px;
+    padding-right: 48px;
+    .container {
+        .footer-hd {
+            align-items: center;
+            .list {
+                li{
+                    width: 64px;
+                    margin-right: 40px;
+                }
+            }
+            .icon {
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .content {
+            
+            img {
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+            }
+            p{
+                @include font-thired;
+            }
+        }
+        .footer-dn {
+            @include font-forth;
+            color: white;
+            
+            img {
+               display: none;
+            }
+            .copy {
+                width: 100%;
+                @include flex("sb", "r");
+                align-items: center;
+                >span{
+                    display: block;
+                }
+                
+            }
+        }
+    }
+    
+}
