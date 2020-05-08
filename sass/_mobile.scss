@@ -1,11 +1,17 @@
 @media (max-width: 768px) {
-    @import "layout_pad";
     @import "index_pad";
     @import "faq_pad";
+    @import "layout_pad";
+}
+
+@media (max-width: 568px) {
+    @import "index_phone";
+    @import "faq_phone";
+    @import "layout_phone";
 }
 
 @media (max-width: 375px) {
-    @import "layout_phone";
     @import "index_phone";
     @import "faq_phone";
+    @import "layout_phone";
 }

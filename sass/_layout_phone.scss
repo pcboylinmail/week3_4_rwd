@@ -4,17 +4,18 @@ header {
     padding: 10px 0;
     align-items: center;
     flex-direction: column;
-
+    h1 img {
+        width: 48px;
+        height: 30px;
+    }
+    
     .menubtn {
         display: block;
         position: absolute;
         left: 13px;
         width: 24px;
     }
-    h1 img {
-        width: 48px;
-        height: 30px;
-    }
+    
     .menu {
         max-height: 0px;
         left: 0;
@@ -27,32 +28,33 @@ header {
         overflow: hidden;
         transition: all 0.8s;
         z-index: 120;
-
-        &active {
-            max-height: 252px;
-        }
-        li {
-            display: block;
-            background: #aa0601;
-            color: #ffffff;
-            border-top: 1px solid #ffffff;
-            padding: 16px 0;
-            z-index: 120;
-            &hover {
-                background: #8f0400;
-            }
-        }
-        &active {
-            max-height: 252px;
-        }
+    }
+    
+    .menu.active {
+        max-height: 252px;
+    }
+    
+    .menu li {
+        display: block;
+        background: #aa0601;
+        color: #ffffff;
+        border-top: 1px solid #ffffff;
+        padding: 16px 0;
+        z-index: 120;
+    }
+    
+    .menu li:hover {
+        background: #8f0400;
     }
 }
+
+
 footer {
     padding-left: 11px;
     padding-right: 11px;
     .container {
-        .footer-phone{
-            @include flex("sb", "rr");           
+        .footer-phone {
+            @include flex("sb", "rr");
         }
         .footer-hd {
             align-items: center;
@@ -61,10 +63,10 @@ footer {
                 display: none;
             }
             .icon {
-                li{
+                li {
                     margin-right: 24px;
                 }
-                img{
+                img {
                     width: 24px;
                     height: 24px;
                 }
@@ -76,32 +78,30 @@ footer {
                 height: 13px;
                 margin-right: 8px;
             }
-            p{
-                @include font-style(16px,30px);
+            p {
+                @include font-style(16px, 30px);
             }
         }
         .footer-dn {
-            
             color: white;
-            
+
             img {
-               display: none;
+                display: none;
             }
             .copy {
                 width: 100%;
                 @include flex("sb", "r");
                 align-items: start;
                 flex-direction: column;
-                >span{
+                > span {
                     display: block;
                 }
-                p{
-                    span{
+                p {
+                    span {
                         display: block;
                     }
                 }
             }
         }
     }
-    
 }

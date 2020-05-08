@@ -1,30 +1,32 @@
 
 header {
     padding: 30px 88px;
-    background-color: $main-color;
-    @include flex("sb", "r");
-    img {
-        @include img-base;
-    }
+    background-color: #aa0601;
+    display: flex;
+    justify-content: space-between;
     .menubtn {
         display: none;
-        color: #ffffff;
+        color: #FFFFFF;
     }
+    
     .menu {
         display: flex;
         width: 512px;
         justify-content: space-between;
-        li {
-            padding: 10px 0;
-            a {
-                color: white;
-                font-size: 20px;
-                line-height: 1.5;
-                text-decoration: none;
-            }
-        }
+    }
+    
+    .menu li {
+        padding: 10px 0;
+    }
+    
+    .menu li a {
+        color: white;
+        font-size: 20px;
+        line-height: 1.5;
+        text-decoration: none;
     }
 }
+
 
 footer {
     font-family:Roboto,sans-serif;
